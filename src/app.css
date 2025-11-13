@@ -11,7 +11,7 @@
     transition: color 0.15s, background-color 0.15s;
 }
 
-.roll-in, .slide-out {
+.roll-in, .roll-out {
     animation-duration: 250ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
