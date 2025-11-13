@@ -11,21 +11,21 @@
     transition: color 0.15s, background-color 0.15s;
 }
 
-.slide-in, .slide-out {
+.roll-in, .slide-out {
     animation-duration: 250ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
 
-.slide-in {
-    animation-name: slide-in;
+.roll-in {
+    animation-name: roll-in;
 }
 
-.slide-out {
-    animation-name: slide-out;
+.roll-out {
+    animation-name: roll-out;
 }
 
-@keyframes slide-in {
+@keyframes roll-in {
     from {
         transform: translateX(-100px) rotate(-0.5turn);
     }
@@ -34,7 +34,7 @@
     }
 }
 
-@keyframes slide-out {
+@keyframes roll-out {
     from {
         transform: translateX(0) rotate(0turn);
     }

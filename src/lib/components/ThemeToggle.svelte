@@ -1,22 +1,18 @@
 <script lang="ts">
     import { onMount } from "svelte";
-
-    let isDark = $state(false);
+    import { theme } from "../state/theme.svelte";
 
     let sunButton: HTMLButtonElement;
     let moonButton: HTMLButtonElement;
 
     onMount(() => {
-        // HACK: fixes site starting on wrong state
-        isDark = localStorage.theme !== "dark";
-
-        const currentButton = isDark ? moonButton : sunButton;
-        currentButton.classList.add("hidden");
+        const notCurrentButton = theme.isDark ? sunButton : moonButton;
+        notCurrentButton.classList.add("hidden");
     });
 
     function toggleTheme() {
-        isDark = localStorage.theme === "dark";
-        localStorage.theme = isDark ? "light" : "dark";
+        theme.isDark = !$state.snapshot(theme.isDark);
+        localStorage.theme = theme.isDark ? "dark" : "light";
 
         document.documentElement.classList.toggle(
             "dark",
@@ -25,30 +21,30 @@
                     window.matchMedia("(prefers-color-scheme: dark)").matches),
         );
 
-        if (isDark) {
+        if (!theme.isDark) {
             moonButton.addEventListener("animationend", listener);
-            moonButton.classList.add("slide-out");
+            moonButton.classList.add("roll-out");
 
             function listener(event: AnimationEvent) {
                 if (event.type === "animationend") {
                     moonButton.classList.add("hidden");
-                    moonButton.classList.remove("slide-out");
+                    moonButton.classList.remove("roll-out");
                     sunButton.classList.remove("hidden");
-                    sunButton.classList.add("slide-in");
+                    sunButton.classList.add("roll-in");
                 }
 
                 moonButton.removeEventListener("animationend", listener);
             }
         } else {
             sunButton.addEventListener("animationend", listener);
-            sunButton.classList.add("slide-out");
+            sunButton.classList.add("roll-out");
 
             function listener(event: AnimationEvent) {
                 if (event.type === "animationend") {
                     sunButton.classList.add("hidden");
-                    sunButton.classList.remove("slide-out");
+                    sunButton.classList.remove("roll-out");
                     moonButton.classList.remove("hidden");
-                    moonButton.classList.add("slide-in");
+                    moonButton.classList.add("roll-in");
                 }
 
                 sunButton.removeEventListener("animationend", listener);
