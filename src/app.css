@@ -6,3 +6,7 @@
     --color-cream: oklch(0.9644 0.0282 74.31);
     --color-midnight: oklch(0.2556 0.0373 288.04);
 }
+
+* {
+    transition: color 0.15s, background-color 0.15s;
+}

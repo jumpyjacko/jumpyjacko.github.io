@@ -1,6 +1,14 @@
 <script lang="ts">
+    import { onMount } from "svelte";
+
+    let isDark = $state(false);
+
+    onMount(() => { // HACK: fixes site starting on wrong state
+        isDark = localStorage.theme !== "dark";
+    });
+
     function toggleTheme() {
-        const isDark = localStorage.theme === "dark";
+        isDark = localStorage.theme === "dark";
         localStorage.theme = isDark ? "light" : "dark";
 
         document.documentElement.classList.toggle(
@@ -12,4 +20,6 @@
     }
 </script>
 
-<button onclick={toggleTheme}>a button</button>
+<button onclick={toggleTheme}>
+    {isDark ? "go to dark" : "go to light"}
+</button>
