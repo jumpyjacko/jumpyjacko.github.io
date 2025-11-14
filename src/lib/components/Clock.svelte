@@ -10,7 +10,7 @@
     let angle = $derived.by(() => {
         let a = totalMinutes;
         if (totalMinutes >= 720) a -= 720;
-        return mapRange(a, 0, 720, -85, 85); // NOTE: consider radians
+        return mapRange(a, 0, 720, -75, 75); // NOTE: consider radians
     });
 
     let interval: any;
@@ -72,7 +72,7 @@
 <style>
 .clock {
     position: absolute;
-    transform-origin: 50% 45vh;
+    transform-origin: 50% 35vh;
     transform: translateY(-15vh) rotate(-90deg);
     transition: transform 1s ease-in-out;
 }
