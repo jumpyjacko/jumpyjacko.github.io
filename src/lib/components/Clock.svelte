@@ -69,8 +69,7 @@
         interval = setInterval(() => {
             [timeHours, timeMinutes] = getTime(hasTemporal);
             updateMarker();
-            totalMinutes += 20;
-        }, 1000);
+        }, 10000);
     });
 
     onDestroy(() => {
@@ -79,36 +78,52 @@
 </script>
 
 <div class="absolute top-1">
+    <div
+        bind:this={marker}
+        class="clock origin-[center_10rem] md:origin-[center_24rem] lg:origin-[center_28rem]"
+    >
+        <ThemeToggle />
+    </div>
     <svg
-        class="absolute z-[-1] w-xs md:w-3xl lg:w-4xl h-auto -translate-x-1/2"
+        class="absolute z-[-1] w-xs md:w-3xl lg:w-4xl h-auto -translate-x-1/2 orbit-cutout"
         viewBox="0 0 100 100"
     >
-        <circle
-            cx="50"
-            cy="50"
-            r="45"
-            fill="transparent"
-            stroke={textColour}
-            stroke-width="5"
-            stroke-dasharray="10 100 10"
-            vector-effect="non-scaling-stroke"
-        >
-            <animateTransform
-                attributeName="transform"
-                begin="0s"
-                dur="60s"
-                type="rotate"
-                from="0 50 50"
-                to="360 50 50"
-                repeatCount="indefinite"
+        <mask id="orbitMask" mask-type="luminance">
+            <rect x="0" y="0" width="100" height="100" fill="white" />
+            <rect
+                x="45"
+                y="0"
+                width="10"
+                height="50"
+                fill="black"
+                transform="rotate({angle} 50 50)"
+                style="transition: transform 1s ease-in-out"
             />
-        </circle>
-        <!-- <circle cx="50" cy="50" r="0.1" fill="magenta" /> -->
+            <circle cx="50" cy="85" r="50" fill="black" />
+        </mask>
+        <g mask="url(#orbitMask)">
+            <circle
+                cx="50"
+                cy="50"
+                r="45"
+                fill="transparent"
+                stroke={textColour}
+                stroke-width="5"
+                stroke-dasharray="10 100 10"
+                vector-effect="non-scaling-stroke"
+            >
+                <animateTransform
+                    attributeName="transform"
+                    begin="0s"
+                    dur="60s"
+                    type="rotate"
+                    from="0 50 50"
+                    to="360 50 50"
+                    repeatCount="indefinite"
+                />
+            </circle>
+        </g>
     </svg>
-    <div bind:this={marker} class="clock origin-[center_10rem] md:origin-[center_24rem] lg:origin-[center_28rem]">
-        <ThemeToggle />
-        <!-- <div class="bg-blue-500 rounded-full clock-arm"></div> -->
-    </div>
 </div>
 
 <style>
@@ -119,13 +134,3 @@
         transition: transform 1s ease-in-out;
     }
 </style>
-    <!-- .clock-arm { -->
-    <!--     position: absolute; -->
-    <!--     top: 50%; -->
-    <!--     left: 50%; -->
-    <!--     width: 2px; -->
-    <!--     height: 500px; -->
-    <!---->
-    <!--     transform-origin: bottom center; -->
-    <!--     transform: translate(-50%, 0); -->
-    <!-- } -->
