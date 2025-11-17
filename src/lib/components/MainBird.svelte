@@ -58,13 +58,13 @@
 
     $effect(() => {
         updateTransform(angleX + angleY + scale);
-    })
+    });
 </script>
 
 <div bind:this={mainBird} class="main-bird mt-50 select-none">
     <img
         bind:this={birdImg}
-        src="/images/birb-bg-no-bg.svg"
+        src="/images/birb-bw-no-bg.svg"
         alt="A monochrome, pixel-art bird"
         class="w-fit"
     />
@@ -82,4 +82,3 @@
         pointer-events: none;
     }
 </style>
-

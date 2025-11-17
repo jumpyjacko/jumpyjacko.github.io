@@ -28,11 +28,9 @@
 <main class="flex flex-col justify-center items-center">
     <Clock />
     <MainBird />
-    <h1 class="text-4xl text-center mt-5">
+    <h1 class="text-2xl md:text-4xl text-center mt-5">
         hi, i'm jackson,<br />a software developer
     </h1>
-
-    <div class="h-500">content</div>
 </main>
 <div class="fixed bottom-0 w-full flex justify-center pb-1">
     <svg
