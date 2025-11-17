@@ -83,4 +83,39 @@
     .hover-expand:hover {
         scale: 110%;
     }
+
+    :global {
+        .roll-in,
+        .roll-out {
+            animation-duration: 250ms;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        .roll-in {
+            animation-name: roll-in;
+        }
+
+        .roll-out {
+            animation-name: roll-out;
+        }
+
+        @keyframes roll-in {
+            from {
+                transform: translateX(-40px) rotate(-0.25turn);
+            }
+            to {
+                transform: translateX(0) rotate(0turn);
+            }
+        }
+
+        @keyframes roll-out {
+            from {
+                transform: translateX(0) rotate(0turn);
+            }
+            to {
+                transform: translateX(-40px) rotate(-0.25turn);
+            }
+        }
+    }
 </style>
