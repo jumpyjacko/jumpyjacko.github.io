@@ -3,6 +3,7 @@
         href="https://youtube.com/@jumpyjacko"
         target="_blank"
         aria-label="Youtube link to jumpyjacko's channel"
+        class="hover-expand"
     >
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -19,6 +20,7 @@
         href="https://github.com/jumpyjacko"
         target="_blank"
         aria-label="Github link to jumpyjacko's profile"
+        class="hover-expand"
     >
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -32,3 +34,12 @@
         >
     </a>
 </div>
+
+<style>
+    .hover-expand {
+        transition: all 0.5s;
+    }
+    .hover-expand:hover {
+        scale: 110%;
+    }
+</style>
