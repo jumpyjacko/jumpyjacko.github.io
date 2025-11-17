@@ -1,6 +1,7 @@
 <script lang="ts">
     import MainBird from "./lib/components/MainBird.svelte";
     import Clock from "./lib/components/Clock.svelte";
+    import SocialsRow from "./lib/components/SocialsRow.svelte";
 
     import { theme } from "./lib/state/theme.svelte";
     import { onMount } from "svelte";
@@ -15,7 +16,7 @@
 
     function removeScrollIndicator() {
         scrollIndicator.classList.remove("animate-bounce");
-        scrollIndicator.classList.add("slide-down")
+        scrollIndicator.classList.add("slide-down");
         window.removeEventListener("scroll", removeScrollIndicator);
     }
 
@@ -24,13 +25,15 @@
     });
 </script>
 
-<header class="fixed flex flex-row bg-transparent"></header>
 <main class="flex flex-col justify-center items-center">
     <Clock />
     <MainBird />
     <h1 class="text-2xl md:text-4xl text-center mt-5">
         hi, i'm jackson,<br />a software developer
     </h1>
+
+    <div class="h-8"></div>
+    <SocialsRow />
 </main>
 <div class="fixed bottom-0 w-full flex justify-center pb-1">
     <svg
