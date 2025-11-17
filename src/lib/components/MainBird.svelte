@@ -4,6 +4,14 @@
     let mainBird: HTMLDivElement;
     let birdImg: HTMLImageElement;
 
+    let angleX = $state("");
+    let angleY = $state("");
+    let scale = $state("");
+
+    function updateTransform(transform: string) {
+        birdImg.style.transform = transform;
+    }
+
     function tilt(e: MouseEvent) {
         const rect = mainBird.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -15,19 +23,23 @@
         const rotateY = ((x - centerX) / centerX) * 10;
         const rotateX = ((y - centerY) / centerY) * -10;
 
-        birdImg.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.10)`;
+        angleX = `rotateX(${rotateX}deg)`;
+        angleY = `rotateY(${rotateY}deg)`;
+        scale = "scale(1.1)";
     }
 
     function reset(e: MouseEvent) {
-        birdImg.style.transform = "rotateX(0) rotateY(0) scale(1)";
+        angleX = "rotateX(0)";
+        angleY = "rotateY(0)";
+        scale = "scale(1)";
     }
 
     function press(e: MouseEvent) {
-        birdImg.style.transform = "scale(1)";
+        scale = "scale(0.9)";
     }
 
     function release(e: MouseEvent) {
-        birdImg.style.transform = "scale(1.1)";
+        scale = "scale(1.1)";
     }
 
     onMount(() => {
@@ -43,6 +55,10 @@
         mainBird.removeEventListener("mousedown", press);
         mainBird.removeEventListener("mouseup", release);
     });
+
+    $effect(() => {
+        updateTransform(angleX + angleY + scale);
+    })
 </script>
 
 <div bind:this={mainBird} class="main-bird mt-50">
