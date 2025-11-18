@@ -35,7 +35,12 @@
     <div class="h-8"></div>
     <SocialsRow />
 </main>
-<div class="fixed bottom-0 w-full flex justify-center pb-1">
+<footer class="w-full flex flex-row justify-end fixed bottom-0 p-1">
+    <a href="https://github.com/jumpyjacko/portfolio" target="_blank" class="underline">
+        source code
+    </a>
+</footer>
+<div class="fixed bottom-0 w-full flex justify-center pb-1 z-[-1]">
     <svg
         bind:this={scrollIndicator}
         width="60"
