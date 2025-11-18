@@ -1,13 +1,6 @@
 <script lang="ts">
     import { onDestroy, onMount } from "svelte";
     import ThemeToggle from "./ThemeToggle.svelte";
-    import { theme } from "../state/theme.svelte";
-
-    let textColour = $derived(
-        theme.isDark
-            ? "oklch(0.9644 0.0282 74.31)"
-            : "oklch(0.2316 0.0373 288.04)",
-    );
 
     let marker: HTMLDivElement;
 
@@ -108,7 +101,7 @@
                 cy="50"
                 r="45"
                 fill="transparent"
-                stroke={textColour}
+                stroke="currentColor"
                 stroke-width="5"
                 stroke-dasharray="10 100 10"
                 vector-effect="non-scaling-stroke"
@@ -129,7 +122,7 @@
                 cy="50"
                 r="25"
                 fill="transparent"
-                stroke={textColour}
+                stroke="currentColor"
                 stroke-width="3"
                 stroke-dasharray="20 80 50"
                 vector-effect="non-scaling-stroke"

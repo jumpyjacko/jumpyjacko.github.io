@@ -3,16 +3,9 @@
     import Clock from "./lib/components/Clock.svelte";
     import SocialsRow from "./lib/components/SocialsRow.svelte";
 
-    import { theme } from "./lib/state/theme.svelte";
     import { onMount } from "svelte";
 
     let scrollIndicator: SVGElement;
-
-    let textColour = $derived(
-        theme.isDark
-            ? "oklch(0.9644 0.0282 74.31)"
-            : "oklch(0.2316 0.0373 288.04)",
-    );
 
     function removeScrollIndicator() {
         scrollIndicator.classList.remove("animate-bounce");
@@ -55,7 +48,7 @@
     >
         <path
             d="M15 15 L30 30 L45 15"
-            stroke={textColour}
+            stroke="currentColor"
             stroke-width="2"
             fill="none"
         />
