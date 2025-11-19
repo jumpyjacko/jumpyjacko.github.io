@@ -30,7 +30,7 @@
 
     <p class="mt-100 mb-10">theres no content here yet...</p>
 </main>
-<footer class="hidden w-full md:flex flex-row justify-end fixed bottom-0 p-1">
+<footer class="hidden md:flex flex-row justify-end fixed bottom-0 right-0 p-1">
     <a
         href="https://github.com/jumpyjacko/jumpyjacko.github.io"
         target="_blank"
@@ -39,7 +39,11 @@
         source code
     </a>
 </footer>
-<div class="fixed bottom-0 w-full flex justify-center pb-1 z-[-1]">
+<button
+    class="fixed bottom-0 w-full flex justify-center pt-4 pb-1"
+    onclick={() => window.scrollBy(0, window.innerHeight / 2)}
+    aria-label="Scroll to content"
+>
     <svg
         bind:this={scrollIndicator}
         width="60"
@@ -53,7 +57,7 @@
             fill="none"
         />
     </svg>
-</div>
+</button>
 
 <style>
     :global {
