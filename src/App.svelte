@@ -3,6 +3,8 @@
     import Clock from "./lib/components/Clock.svelte";
     import SocialsRow from "./lib/components/SocialsRow.svelte";
 
+    import Projects from "./lib/sections/Projects.svelte";
+
     import { onMount } from "svelte";
 
     let scrollIndicator: SVGElement;
@@ -28,7 +30,11 @@
     <div class="h-8"></div>
     <SocialsRow />
 
-    <p class="mt-100 mb-10">theres no content here yet...</p>
+    <div class="mt-100"></div>
+
+    <Projects />
+
+    <div class="mb-10"></div>
 </main>
 <footer class="hidden md:flex flex-row justify-end fixed bottom-0 right-0 p-1 z-1">
     <a
