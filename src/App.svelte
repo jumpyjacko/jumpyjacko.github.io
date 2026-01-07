@@ -39,7 +39,12 @@
         <img
             src="https://github.com/jumpyjacko/dotfiles/raw/wayland/images/niri_main.jpg"
             alt="Screenshot of an Arch-based desktop"
-            class="w-1/2"
+            class="w-1/2 p-1"
+        />
+        <img
+            src="https://github.com/jumpyjacko/nvim/raw/main/images/cmp_oil.jpg"
+            alt="Screenshot of a Neovim window"
+            class="w-1/2 p-1"
         />
     </h2>
 </main>
