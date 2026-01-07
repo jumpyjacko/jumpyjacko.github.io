@@ -34,7 +34,9 @@
     <Projects />
     <div class="mb-10"></div>
 
-    <h2 class="text-2xl text-center justify-center w-full flex flex-col items-center">
+    <h2
+        class="text-2xl text-center justify-center w-full flex flex-col items-center"
+    >
         I use Arch btw
         <img
             src="https://github.com/jumpyjacko/dotfiles/raw/wayland/images/niri_main.jpg"
@@ -47,6 +49,8 @@
             class="w-1/2 p-1"
         />
     </h2>
+
+    <div class="mb-50"></div>
 </main>
 <footer
     class="hidden md:flex flex-row justify-end fixed bottom-0 right-0 p-1 z-1"

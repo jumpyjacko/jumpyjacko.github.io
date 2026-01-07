@@ -4,9 +4,9 @@
     }
 </script>
 
-<h1 class="text-xl font-bold">stuff I have made</h1>
+<h1 class="text-2xl">stuff I have made</h1>
 
-<h1 class="text-lg font-semibold">the real projects</h1>
+<h1 class="text-lg">the real projects</h1>
 <div class="grid grid-cols-2 gap-8 text-wrap w-3/4">
     <div>
         <iframe src="/" title="this website" class="h-full w-full"> </iframe>
@@ -35,7 +35,7 @@
     </button>
 </div>
 
-<h1 class="text-lg font-semibold">the random projects</h1>
+<h1 class="text-lg mt-10">the random projects</h1>
 
 <div class="grid grid-cols-2 gap-8 text-wrap w-3/4">
     <button onclick={() => goToLink("https://github.com/jumpyjacko/wireframe-cli")}>
@@ -97,7 +97,6 @@
 <style>
     button,
     div {
-        font-size: 14px;
         text-align: center;
     }
 
