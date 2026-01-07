@@ -31,12 +31,21 @@
     <SocialsRow />
 
     <div class="mt-100"></div>
-
     <Projects />
-
     <div class="mb-10"></div>
+
+    <h2 class="text-2xl text-center justify-center w-full flex flex-col items-center">
+        I use Arch btw
+        <img
+            src="https://github.com/jumpyjacko/dotfiles/raw/wayland/images/niri_main.jpg"
+            alt="Screenshot of an Arch-based desktop"
+            class="w-1/2"
+        />
+    </h2>
 </main>
-<footer class="hidden md:flex flex-row justify-end fixed bottom-0 right-0 p-1 z-1">
+<footer
+    class="hidden md:flex flex-row justify-end fixed bottom-0 right-0 p-1 z-1"
+>
     <a
         href="https://github.com/jumpyjacko/jumpyjacko.github.io"
         target="_blank"
