@@ -34,22 +34,6 @@
     <Projects />
     <div class="mb-10"></div>
 
-    <h2
-        class="text-2xl text-center justify-center w-full flex flex-col items-center"
-    >
-        I use Arch btw
-        <img
-            src="https://github.com/jumpyjacko/dotfiles/raw/wayland/images/niri_main.jpg"
-            alt="Screenshot of an Arch-based desktop"
-            class="w-1/2 p-1"
-        />
-        <img
-            src="https://github.com/jumpyjacko/nvim/raw/main/images/cmp_oil.jpg"
-            alt="Screenshot of a Neovim window"
-            class="w-1/2 p-1"
-        />
-    </h2>
-
     <div class="mb-50"></div>
 </main>
 <footer
