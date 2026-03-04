@@ -55,12 +55,12 @@
     <button onclick={() => goToLink("https://github.com/jumpyjacko/slashg")}>
         <div class="flex flex-row">
             <img
-                src="https://private-user-images.githubusercontent.com/48436180/533053967-da5b83b7-5cfd-462f-acbb-6c777ab8879e.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njc4MjIxMTgsIm5iZiI6MTc2NzgyMTgxOCwicGF0aCI6Ii80ODQzNjE4MC81MzMwNTM5NjctZGE1YjgzYjctNWNmZC00NjJmLWFjYmItNmM3NzdhYjg4NzllLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAxMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMTA3VDIxMzY1OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTg2YTVkZmEyYTBkZmI1MjA1NmZhODI5MGQ2NTBkYzgwNzAwMjhiN2QwYjIzYWU5OWRkYzIxMzg1OThmYzk1M2EmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.9MYhXn2msfa-Wwb9dHlAYiSRB-Qq9TrJd17o39q38kU"
+                src="https://github.com/user-attachments/assets/da5b83b7-5cfd-462f-acbb-6c777ab8879e"
                 alt="Native android app that calculates things per 100g"
                 class="w-1/2"
             />
             <img
-                src="https://private-user-images.githubusercontent.com/48436180/533053984-d2e07573-ba72-430c-b0f3-8f6a8ebe3469.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njc4MjIxMTgsIm5iZiI6MTc2NzgyMTgxOCwicGF0aCI6Ii80ODQzNjE4MC81MzMwNTM5ODQtZDJlMDc1NzMtYmE3Mi00MzBjLWIwZjMtOGY2YThlYmUzNDY5LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAxMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMTA3VDIxMzY1OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTVjMjZiMzdkN2U3MWNkYjM4NTllZDc4NTg1YmNmODg5ZDMxMWU1NjU5YzZkZDA3YmYyOTcxYmM0Zjk0NjUxOWYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.y2J0QR90e9kPr0m9Mx1fjivZHsgh3o7EGzqTpgZIC_Q"
+                src="https://github.com/user-attachments/assets/d2e07573-ba72-430c-b0f3-8f6a8ebe3469"
                 alt="Native android app that calculates things per 100g"
                 class="w-1/2"
             />
