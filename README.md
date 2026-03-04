@@ -1,2 +1,2 @@
-# a very bad portfolio using svelte
-i should just use html...
+# My portfolio website 
+Uses Svelte and GitHub Actions to build and deploy a static page to GitHub Pages.
