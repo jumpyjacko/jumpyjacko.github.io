@@ -14,6 +14,20 @@
     </div>
     <button
         onclick={() =>
+            goToLink("https://jumpyjacko.github.io/aler")}
+    >
+        <img
+            src="/images/aler/aler-main.png"
+            alt="alér main page"
+        />
+        <img
+            src="/images/aler/aler-rating.png"
+            alt="alér rating page"
+        />
+        alér - a pairwise media rating system
+    </button>
+    <button
+        onclick={() =>
             goToLink("https://github.com/jumpyjacko/audio_converter")}
     >
         <img
